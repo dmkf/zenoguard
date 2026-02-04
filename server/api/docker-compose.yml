@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: zenoguard-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/var/www/html
+      - /var/www/html/vendor
+    environment:
+      APP_ENV: local
+      APP_DEBUG: "true"
+      APP_KEY: base64:GeneratedKeyShouldBeReplaced
+      DB_CONNECTION: mysql
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_DATABASE: zenoguard
+      DB_USERNAME: zenoguard
+      DB_PASSWORD: secret
+    depends_on:
+      - db
+    networks:
+      - zenoguard-network
+
+  db:
+    image: docker.mirrors.ustc.edu.cn/library/mysql:8.0
+    container_name: zenoguard-db
+    environment:
+      MYSQL_DATABASE: zenoguard
+      MYSQL_USER: zenoguard
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: rootsecret
+    ports:
+      - "3306:3306"
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - zenoguard-network
+
+networks:
+  zenoguard-network:
+    driver: bridge
+
+volumes:
+  db-data:
