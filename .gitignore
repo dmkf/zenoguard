@@ -1,0 +1,6 @@
+*.log
+*.cache
+storage/*
+.git
+.claude
+.DS_Store
