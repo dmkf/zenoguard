@@ -15,12 +15,12 @@ class UserSeeder extends Seeder
     {
         // Create default admin user
         User::updateOrCreate(
-            ['username' => 'xiong'],
+            ['username' => 'admin'],
             [
-                'password' => Hash::make('6633669'),
+                'password' => Hash::make('admin123'),
             ]
         );
 
-        $this->command->info('Default admin user created (username: xiong, password: 6633669)');
+        $this->command->info('Default admin user created (username: admin, password: admin123)');
     }
 }

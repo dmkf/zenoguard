@@ -87,7 +87,7 @@ php artisan migrate
 php artisan db:seed --class=UserSeeder
 ```
 
-默认账号：`xiong` / `6633669`
+默认账号：`admin` / `admin123`
 
 ### 8. 构建管理后台
 ```bash

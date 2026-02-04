@@ -94,7 +94,7 @@ php artisan db:seed --force --class=UserSeeder
 修改默认管理员密码：
 ```bash
 php artisan tinker
->>> User::where('username', 'xiong')->update(['password' => Hash::make('NEW_PASSWORD')]);
+>>> User::where('username', 'admin')->update(['password' => Hash::make('NEW_PASSWORD')]);
 ```
 
 #### 6. 构建前端

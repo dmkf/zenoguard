@@ -78,8 +78,8 @@ Authorization: Bearer {token}
 **请求体**:
 ```json
 {
-  "username": "xiong",
-  "password": "6633669"
+  "username": "admin",
+  "password": "admin123"
 }
 ```
 
@@ -88,7 +88,7 @@ Authorization: Bearer {token}
 {
   "user": {
     "id": 1,
-    "username": "xiong"
+    "username": "admin"
   },
   "token": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 }
@@ -116,7 +116,7 @@ Authorization: Bearer {token}
 {
   "user": {
     "id": 1,
-    "username": "xiong"
+    "username": "admin"
   }
 }
 ```
