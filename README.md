@@ -218,7 +218,7 @@ sudo systemctl start zenoguard-agent
 
 ### Server端
 1. 访问 `https://monitor.example.com`
-2. 使用 `xiong` / `6633669` 登录
+2. 使用 `admin` / `admin123` 登录
 3. 检查仪表盘显示正常
 
 ### Agent端
